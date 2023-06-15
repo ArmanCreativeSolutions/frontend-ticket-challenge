@@ -1,11 +1,15 @@
 // Import necessary dependencies and types
 import React, { useState, useEffect } from 'react';
-import { Map, SeatMap, Ticket } from './types';
+import { Map, SeatMap, Ticket } from '../../types';
+import Maps from '../../components/Layout/Maps/Maps';
+import useSelectSeatsStyles from './useSelectSeats.style';
+import cs from 'classnames';
 
 const SelectSeats: React.FC = () => {
   const [maps, setMaps] = useState<Map[]>([]);
   const [selectedMap, setSelectedMap] = useState<Map | null>(null);
   const [seats, setSeats] = useState<SeatMap>({});
+  const styles = useSelectSeatsStyles();
 
   useEffect(() => {
     // Fetch maps and set the maps state here
@@ -17,7 +21,11 @@ const SelectSeats: React.FC = () => {
     // Handle the seat selection and purchase here
   };
 
-  return <div data-testid="select-seats">{/* Render the seats here */}</div>;
+  return (
+    <div data-testid="select-seats" className={cs(styles.root)}>
+      <Maps />
+    </div>
+  );
 };
 
 export default SelectSeats;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import SelectSeats from './SelectSeats';
-import ConfirmPurchase from './ConfirmPurchase';
-import Layout from './Layout';
+import Layout from './components/Layout/Layout';
+import SelectSeats from './pages/SelectSeats/SelectSeats';
+import ConfirmPurchase from './pages/ConfirmPurchase/ConfirmPurchase';
 
 const App: React.FC = () => {
   return (
