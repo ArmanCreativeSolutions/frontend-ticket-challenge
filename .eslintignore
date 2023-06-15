@@ -1,0 +1,8 @@
+!.prettierrc.js
+
+node_modules/*
+public/charting_library/*
+public/datafeeds/*
+coverage/*
+
+test-report.*

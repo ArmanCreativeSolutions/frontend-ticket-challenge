@@ -3,11 +3,10 @@ import React from 'react';
 import { Ticket } from './types';
 
 /** Props for this component */
-interface ConfirmPurchaseProps {
-}
+interface ConfirmPurchaseProps {}
 
 /** Component that displays a confirmation message after purchase is successful*/
-const ConfirmPurchase: React.FC<ConfirmPurchaseProps> = ({  }) => {
+const ConfirmPurchase: React.FC<ConfirmPurchaseProps> = () => {
   return (
     <div>
       <h2>Purchase Successful</h2>

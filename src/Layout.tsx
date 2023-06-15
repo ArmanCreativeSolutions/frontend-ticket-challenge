@@ -3,14 +3,13 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 
 /** Props for this component */
-interface LayoutProps {
-}
+interface LayoutProps {}
 
 /** Component that displays a confirmation message after purchase is successful*/
-const Layout: React.FC<LayoutProps> = ({  }) => {
+const Layout: React.FC<LayoutProps> = () => {
   return (
     <div>
-        <Outlet />
+      <Outlet />
     </div>
   );
 };

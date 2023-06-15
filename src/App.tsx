@@ -7,12 +7,12 @@ import Layout from './Layout';
 const App: React.FC = () => {
   return (
     <Routes>
-      <Route path='/' element={<Layout />} >
+      <Route path="/" element={<Layout />}>
         <Route index element={<SelectSeats />} />
         <Route path="confirm" element={<ConfirmPurchase />} />
       </Route>
     </Routes>
   );
-}
+};
 
 export default App;
