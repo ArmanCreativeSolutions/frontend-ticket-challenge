@@ -1,9 +1,38 @@
+// app.test.js
+import { render, screen, cleanup } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import App from './App';
+import { MemoryRouter } from 'react-router-dom';
+import { UserEvent } from '@testing-library/user-event/dist/types/setup/setup';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App', () => {
+  let user: UserEvent;
+
+  beforeAll(() => {
+    user = userEvent.setup();
+  });
+
+  afterEach(() => {
+    cleanup();
+  });
+
+  test('full app rendering/navigating', async () => {
+    render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>,
+    );
+    expect(screen.getByTestId('select-seats')).toBeInTheDocument();
+  });
+  test('navigates to /confirm', async () => {
+    render(
+      <MemoryRouter initialEntries={['/confirm']}>
+        <App />
+      </MemoryRouter>,
+    );
+    // Verify the ConfirmPurchase component is rendered
+    expect(screen.getByTestId('confirm-purchase')).toBeInTheDocument();
+  });
 });

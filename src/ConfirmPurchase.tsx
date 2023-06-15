@@ -8,7 +8,7 @@ interface ConfirmPurchaseProps {}
 /** Component that displays a confirmation message after purchase is successful*/
 const ConfirmPurchase: React.FC<ConfirmPurchaseProps> = () => {
   return (
-    <div>
+    <div data-testid="confirm-purchase">
       <h2>Purchase Successful</h2>
       <p>You have successfully purchased ticket with the following details:</p>
     </div>

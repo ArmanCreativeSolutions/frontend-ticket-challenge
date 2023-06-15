@@ -17,7 +17,7 @@ const SelectSeats: React.FC = () => {
     // Handle the seat selection and purchase here
   };
 
-  return <div>{/* Render the seats here */}</div>;
+  return <div data-testid="select-seats">{/* Render the seats here */}</div>;
 };
 
 export default SelectSeats;
