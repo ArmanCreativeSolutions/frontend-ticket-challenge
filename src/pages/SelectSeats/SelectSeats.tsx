@@ -16,6 +16,14 @@ const SelectSeats: React.FC = () => {
     // Fetch maps and set the maps state here
     // Then randomly select one map and set the selectedMap state
     // Fetch the seats for the selected map and set the seats state
+    fetch('/api/map')
+      .then((res) => res.json())
+      .then((data) => {
+        console.log('this is data', data);
+      })
+      .catch((error) => {
+        console.log('this is error', error);
+      });
   }, []);
 
   const selectSeat = (seat: Ticket) => {
