@@ -3,6 +3,8 @@ import React from 'react';
 import useMapStyles from './useMap.style';
 import cs from 'classnames';
 import { Map } from '../../types';
+import InfoMessage from './components/InfoMessage';
+import MapBox from './components/MapBox';
 
 /** Props for this component */
 interface MapProps {
@@ -19,16 +21,14 @@ const Maps: React.FC<MapProps> = ({ mapData, onMapClick }) => {
   const map =
     mapData && mapData.length > 0 ? (
       mapData.map((mapSource, index) => (
-        <div
+        <MapBox
           key={mapSource.id}
-          className={cs(styles.mapBox)}
-          onClick={(e) => onMapClick(e, mapSource)}
-        >
-          {mapSource.id}
-        </div>
+          mapSource={mapSource}
+          onMapClick={(e) => onMapClick(e, mapSource)}
+        />
       ))
     ) : (
-      <div className={cs(styles.infoMessage)}>No map data available...</div>
+      <InfoMessage />
     );
 
   return (
