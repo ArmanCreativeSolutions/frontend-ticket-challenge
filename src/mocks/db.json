@@ -5,7 +5,7 @@
     "capacity": 10000,
     "map": {
       "m213": {
-        "name": "Lower Tier",
+        "name": "Lower",
         "rows": 4,
         "columns": 4,
         "seats": [
@@ -16,7 +16,7 @@
         ]
       },
       "m654": {
-        "name": "Middle Tier",
+        "name": "Middle",
         "rows": 4,
         "columns": 4,
         "seats": [
@@ -27,7 +27,7 @@
         ]
       },
       "m63": {
-        "name": "Upper Tier",
+        "name": "Upper",
         "rows": 4,
         "columns": 4,
         "seats": [
@@ -38,7 +38,7 @@
         ]
       },
       "m6888": {
-        "name": "VIP Box",
+        "name": "VIP",
         "rows": 4,
         "columns": 4,
         "seats": [

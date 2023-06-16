@@ -1,5 +1,6 @@
 import { createServer, Model, RestSerializer } from 'miragejs';
 import db from './db.json';
+import { generateRandomHash } from '../utils/generateid';
 
 export function makeServer({ environment = 'test' } = {}) {
   const server = createServer({
@@ -42,12 +43,14 @@ export function makeServer({ environment = 'test' } = {}) {
           // @ts-ignore
           db.stadium.map[map_id].seats[x][y] = 1;
 
+          const ticket = { id: generateRandomHash(), x, y, map_id };
+
           // Update tickets in DB
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
-          db.tickets.push({ x, y, map_id });
+          db.tickets.push(ticket);
 
-          return { status: 'success' };
+          return { status: 'success', ticket: ticket };
         } else {
           return { status: 'failed', message: 'Seat is already reserved.' };
         }
