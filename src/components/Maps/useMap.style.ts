@@ -10,9 +10,10 @@ const useMapStyles = createUseStyles({
   },
   mapBox: {
     background: '#f5d2be',
-    margin: 20,
+    margin: 5,
     width: 100,
     height: 100,
+    flex: '0 0 100px',
     borderRadius: 5,
   },
 });
