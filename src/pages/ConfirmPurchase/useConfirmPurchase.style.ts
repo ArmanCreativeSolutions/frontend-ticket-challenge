@@ -5,7 +5,7 @@ const useConfirmPurchaseStyles = createUseStyles({
     display: 'flex',
     width: '100%',
     justifyContent: 'center',
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
     height: '100vh',
   },

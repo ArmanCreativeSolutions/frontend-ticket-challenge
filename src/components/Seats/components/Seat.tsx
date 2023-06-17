@@ -1,7 +1,6 @@
 import React from 'react';
 import cs from 'classnames';
 import useSeatsStyles from '../useSeats.style';
-import { Seat as SeatType } from '../../../types';
 
 interface SeatProps {
   seat: number;

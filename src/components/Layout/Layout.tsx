@@ -3,6 +3,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import useLayoutStyles from './useLayout.style';
 import cs from 'classnames';
+import Navbar from './Navbar/Navbar';
 
 /** Props for this component */
 interface LayoutProps {}
@@ -12,6 +13,7 @@ const Layout: React.FC<LayoutProps> = () => {
   const styles = useLayoutStyles();
   return (
     <div className={cs(styles.root)}>
+      <Navbar />
       <Outlet />
     </div>
   );

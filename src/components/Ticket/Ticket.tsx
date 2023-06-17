@@ -22,13 +22,25 @@ const Ticket: React.FC<TicketProps> = ({ row, seat, map }) => {
       <div className={cs(styles.ticket)}>
         <>
           <div className={cs(styles.ticketHeader)}>
-            <div className={cs(styles.ticketHeaderTitle)}> Map: {map?.id}</div>
-            <div className={cs(styles.ticketHeaderDate)}>
+            <div
+              className={cs(styles.ticketHeaderTitle)}
+              data-testid="ticketHeaderTitle"
+            >
+              {' '}
+              Map: {map?.id}
+            </div>
+            <div
+              className={cs(styles.ticketHeaderDate)}
+              data-testid="ticketHeaderDate"
+            >
               Date: {date.toLocaleDateString('us-EN')}
             </div>
           </div>
           <div className={cs(styles.ticketBody)}>
-            <div className={cs(styles.ticketBodySeats)}>
+            <div
+              className={cs(styles.ticketBodySeats)}
+              data-testid="ticketBodySeats"
+            >
               Seats: row: {row} - seat: {seat}
             </div>
             <div className={cs(styles.ticketBodyPrice)}>Price: 99999</div>

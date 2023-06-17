@@ -1,6 +1,19 @@
 import { createUseStyles } from 'react-jss';
 
 const useSelectSeatsStyles = createUseStyles({
+  '@media (max-width: 600px)': {
+    buttonBox: {
+      flexDirection: 'column',
+    },
+    buyButton: {
+      fontSize: 13,
+    },
+  },
+  '@media (min-width: 601px) and (max-width: 1024px)': {
+    buyButton: {
+      fontSize: 14,
+    },
+  },
   root: {},
   buttonBox: {
     width: '100%',
