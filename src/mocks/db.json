@@ -1,0 +1,54 @@
+{
+  "stadium": {
+    "name": "Volleyball Grand Arena",
+    "location": "123 Volleyball Lane, Sportsville",
+    "capacity": 10000,
+    "map": {
+      "m213": {
+        "name": "Lower",
+        "rows": 4,
+        "columns": 4,
+        "seats": [
+          [0, 1, 1, 0],
+          [1, 0, 0, 1],
+          [1, 1, 0, 1],
+          [0, 1, 1, 1]
+        ]
+      },
+      "m654": {
+        "name": "Middle",
+        "rows": 4,
+        "columns": 4,
+        "seats": [
+          [1, 0, 0, 1],
+          [0, 1, 1, 0],
+          [0, 1, 1, 0],
+          [1, 0, 1, 1]
+        ]
+      },
+      "m63": {
+        "name": "Upper",
+        "rows": 4,
+        "columns": 4,
+        "seats": [
+          [1, 1, 0, 0],
+          [0, 1, 0, 1],
+          [1, 0, 1, 1],
+          [0, 1, 0, 0]
+        ]
+      },
+      "m6888": {
+        "name": "VIP",
+        "rows": 4,
+        "columns": 4,
+        "seats": [
+          [1, 1, 0, 0],
+          [0, 1, 0, 1],
+          [1, 0, 1, 0],
+          [1, 0, 0, 1]
+        ]
+      }
+    }
+  },
+  "tickets": []
+}
